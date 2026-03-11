@@ -1,0 +1,60 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d0e6f4;
+  padding: 0px 80px;
+  width: 100vw;
+  height: 80px;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.navbar-logo img {
+  height: 150px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 90px;
+  font-family: "Mouse Memoirs";
+  font-size: 30px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #737373;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #0056b3;
+}
+
+.separator {
+  height: 35px;
+  width: 3px;
+  background-color: #fff;
+  margin: 0 -20px;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Mouse Memoirs";
+  font-size: 30px;
+  color: #737373;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+  color: #0056b3;
+}

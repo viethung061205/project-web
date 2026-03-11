@@ -1,0 +1,222 @@
+/* Container chính căn giữa màn hình */
+.confirm-container {
+  min-height: 80vh;
+  padding: 50px 20px;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card chứa thông tin */
+.confirm-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Header */
+.confirm-header {
+  background: #003087;
+  color: #ffffff;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.confirm-header h2 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.confirm-header p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Body */
+.confirm-body {
+  padding: 30px;
+}
+
+/* Section title */
+.info-section h3,
+.ticket-section h3 {
+  font-size: 18px;
+  color: #003087;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grid thông tin khách hàng */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-item span {
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.info-item strong {
+  font-size: 15px;
+  color: #333;
+  word-break: break-all;
+}
+
+/* Ticket */
+.ticket-paper {
+  background: #fff;
+  border: 2px dashed #003087;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.ticket-main {
+  padding: 20px;
+}
+
+/* ===== CSS BỔ SUNG CHO BẢNG (PHẦN MỚI) ===== */
+
+/* Header phía trên bảng */
+.ticket-row-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Bảng chi tiết vé */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.ticket-table th {
+  text-align: left;
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ticket-table th.text-right {
+  text-align: right;
+}
+
+.ticket-table td {
+  padding: 12px 0;
+  font-size: 14px;
+  color: #003087;
+  font-weight: 600;
+  border-bottom: 1px solid #fafafa;
+}
+
+.ticket-table td.text-right {
+  text-align: right;
+}
+
+.ticket-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== KẾT THÚC PHẦN BỔ SUNG ===== */
+
+/* Footer vé */
+.ticket-footer {
+  background: #f8faff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #003087;
+}
+
+.ticket-footer span:first-child {
+  font-weight: 600;
+  color: #555;
+}
+
+.total-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #e44d26;
+}
+
+/* Buttons */
+.confirm-actions {
+  padding: 0 30px 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-back,
+.btn-pay {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.btn-back:hover {
+  background: #e5e5e5;
+}
+
+.btn-pay {
+  background: #28a745;
+  color: #ffffff;
+}
+
+.btn-pay:hover {
+  background: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-row-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

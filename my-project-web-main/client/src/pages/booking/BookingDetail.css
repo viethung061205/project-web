@@ -1,0 +1,143 @@
+.booking-detail {
+  padding: 50px;
+  background-color: #142965; 
+  color: white;
+  font-family: "Libre Baskerville";
+}
+
+/* Hero section dùng grid để chia 3 cột */
+.hero-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: stretch;
+}
+
+.banner-gallery {
+  display: grid;
+  grid-template-areas:
+    "left middle middle right"
+    "left middle middle right";
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  grid-template-rows: 250px 250px;
+  gap: 30px;
+  width: 100%;
+  height: 510px;
+}
+
+.banner-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Ảnh 1: to bên trái (chiếm 2 hàng) */
+.banner-gallery img:nth-child(1) {
+  grid-area: left;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+/* Ảnh 2–5: 2x2 giữa */
+.banner-gallery img:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.banner-gallery img:nth-child(3) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.banner-gallery img:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.banner-gallery img:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+/* Ảnh 6: cao bằng ảnh 1, nằm bên phải */
+.banner-gallery img:nth-child(6) {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.info-section {
+  flex: 1;
+  font-weight: 700;
+}
+
+.info-section h1 {
+  font-size: 50px;
+  font-family: "Mouse Memoirs", sans-serif;
+  margin-bottom: 5px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.info-row {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 12px;
+}
+
+.info-row p {
+  background: #81bfea;
+  padding: 10px 5px;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  min-width: 470px;  
+}
+
+.terms-link {
+  background: #81bfea;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 282px;
+  font-size: 15px;
+}
+
+
+.price-box {
+  background-color: #81bfea;
+  color: #e33517;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.price-box p {
+  margin: 12px;
+  text-align: left;
+}
+
+.price-box h2 {
+  font-size: 30px;
+  text-align: left;
+  margin: 12px;
+  padding-right: 100px;
+}
+
+.price-box del {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: #737373;
+  font-weight: bold;
+  margin: 0 20px 12px 0;
+}

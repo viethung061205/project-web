@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Mouse+Memoirs&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap');
+
+/*Chỉnh khoảng cách cho navbar*/
+.main-content {
+  margin-top: 80px; 
+}
+
+/*Home.css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/*Video intro */
+.home-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  z-index: -1;           
+}
+
+.overlay-content {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  color: white;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.overlay-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  font-family: Mouse Memoirs;
+}
+
+.overlay-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  font-family: Libre Baskerville;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 7px 32px;
+  background-color: white;
+  color: black;
+  font-size: 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 2px 2px 6p;
+  font-family: Mouse Memoirs;
+}
+
+/*Thanh điều hướng đến app disney*/
+.disney-news {
+  background-color: #d0e6f4;
+  padding: 10px 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-text-1 {
+  margin: 0;
+  font-style: italic;
+  font-family: Allan;
+  font-size: 44px;
+}
+
+.go-to-apps {
+  display: inline-block;
+  background-color: #3a569f;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.go-to-apps:hover {
+  background-color: #2e4a8f;
+  color: #ffffff;
+}
+
+/*Giới thiệu phim*/
+.movie-section {
+  display: flex;
+  background-color: #142965;
+  padding: 30px;
+  gap: 50px;
+  color: white;
+}
+
+.movie-poster {
+  width: 250px;
+  height: auto;
+  flex: 1;
+}
+
+.movie-description {
+  flex: 2;
+}
+
+.movie-title {
+  background-color: #3a569f;
+  padding: 15px;
+  font-size: 80px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: Mouse Memoirs;
+}
+
+.movie-text {
+  text-align:justify;
+  font-size: 33px;
+  line-height: 2;
+  font-family: Libre Baskerville;
+}
+
+/*Giới thiệu giải thưởng*/
+.awards-section {
+  display: flex;
+  flex-direction: row;
+  background-color: #142965;
+  padding: 30px;
+  gap: 50px;
+  color: white;
+}
+
+.award-description {
+  flex: 2;
+}
+
+.awards-heading {
+  background-color: #3a569f;
+  padding: 15px;
+  font-size: 80px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: Mouse Memoirs;
+}
+
+.awards-list {
+  font-size: 33px;
+  line-height: 2;
+  font-family: Libre Baskerville;
+  margin-left: 30px;
+}
+
+.awards-list p {
+  margin-bottom: 6px;
+}
+
+.awards-list ul {
+  list-style: disc;
+  padding-left: 30px;
+  margin-bottom: 16px;
+}
+
+.awards-media {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.award-image {
+  width: 100%;
+}
+
+.trailer-button {
+  display: inline-block;
+  background-color: #d0e6f4;
+  color: black;
+  font-size: 40px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: Mouse Memoirs;
+  width: 100%;
+}
+
+.trailer-button:hover {
+  background-color: #9eadcd;
+  color: #ffffff;
+}
+
+/*Thanh giới thiệu characters*/
+.news-text-2 {
+  background-color: #d0e6f4;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+  font-family: Allan;
+  font-size: 44px;
+}
+
+/*Giới thiệu characters*/
+.characters-section {
+  background-color: #142965;
+  padding: 40px;
+  text-align: center;
+}
+
+.section-title {
+  color: white;
+  font-family: Mouse Memoirs;
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  gap: 50px 70px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.character-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.4);
+  transform-origin: bottom center;
+}
+
+.character-name {
+  font-family: 'Mouse Memoirs', sans-serif;
+  color: white;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+/*Thanh giới thiệu disneyland*/
+.news-text-3 {
+    background-color: #d0e6f4;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+  font-family: Allan;
+  font-size: 44px;
+}
+
+/*Giới thiệu về disneyland*/
+.disney-section {
+  background-color: #142965;
+  padding: 20px;
+  text-align: center;
+  font-family: Mouse Memoirs;
+}
+
+.top-row {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.disney-card {
+  width: 400px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.disney-card img {
+  width: 100%;
+  height: 550px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.disney-card p {
+  font-size: 50px;
+  margin: 12px 0 6px;
+}
+
+.arrow {
+  font-size: 80px;
+  display: block;
+  margin-top: -10px;
+}
+
+.video-thumbnail {
+  display: flex;
+  justify-content: center;
+}
+
+.youtube-preview {
+  width: 100%;
+  max-width: 1500px;
+  height: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.youtube-preview:hover {
+  transform: scale(1.02);
+}
+
+
+
+/*Footer.css*/
+.footer {
+  background-color: #d0e6f4;
+  padding: 0;
+  font-family: Mouse Memoirs;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+.footer-logo img {
+  height: 300px;
+  transform: translateY(-110px);
+}
+
+.footer-links {
+  display: flex;
+  gap: 80px;
+  margin-right: -850px;
+  margin-top: -240px;
+}
+
+.footer-column p {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #737373;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-column p:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.footer-text {
+  display: block;
+  font-size: 30px;
+  color: #737373;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.2s ease;
+}
+
+.footer-text:hover {
+  color: #0056b3;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 70px;
+  margin-right: -120px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.icon-facebook {
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  font-family: Noto Serif Display;
+  margin-top: -200px;
+  margin-bottom: 10px;
+  margin-right: -450px;
+}
+
+
+
+/*About.css*/
+.about-page {
+  background-color: #142965;
+  color: white;
+  font-family: 'Mouse Memoirs';
+  
+}
+
+.about-banner {
+  background-image: url('https://i.pinimg.com/1200x/97/7d/b6/977db6f76b8f0808e67b5e0efe9ea764.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-banner h1 { 
+  font-size: 90px;
+  color: white;
+  font-family: 'Mouse Memoirs', sans-serif;
+  text-shadow: 2px 2px 5px #000;
+  letter-spacing: 4px;
+}
+
+.about-section {
+  padding: 60px 30px;
+}
+
+.section-1-2, .section-2-1 {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.section-1-2 .image-side {
+  flex: 1;
+}
+.section-1-2 .text-side {
+  flex: 2;
+}
+
+
+.section-2-1 .image-side {
+  flex: 1;
+}
+.section-2-1 .text-side {
+  flex: 2;
+}
+
+.image-side img {
+  width: 100%;
+  height: 580px;
+}
+
+.text-side h2 {
+  background-color: #3a569f;
+  padding: 15px;
+  font-size: 80px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.special {
+  background-color: #3a569f;
+  padding: 15px;
+  font-size: 80px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 0;
+  width: 96%;
+  margin-left: 30px;
+  margin-bottom: -30px;
+}
+
+.text-side p {
+  font-size: 32px;
+  line-height: 2;
+  text-align: justify;
+  font-family: Libre Baskerville;
+}
+
+.section-grid .text-top h2 {
+  background-color: #3a569f;
+  padding: 15px;
+  font-size: 80px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: -50px;
+  width: 100%;
+}
+.section-grid .text-top p {
+  font-size: 30px;
+  line-height: 2;
+  text-align: justify;
+  font-family: Libre Baskerville;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.section-grid .image-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.section-grid .image-row img {
+  width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+/*Login.css*/
+.login-container {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.login-logo img {
+  height: 130px;
+  margin-top: -40px;
+  margin-left: -10px;
+}
+
+.login-container h2 {
+  font-family: Libre Baskerville;
+  margin-top: -30px;
+  font-size: 25px;
+}
+
+.sub-title {
+  font-size: 17px;
+  color: #545454;
+  margin: 20px 0 10px;
+}
+
+.benefits {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  width: 210px;
+  background-color: #f8f8f8;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-family: Libre Baskerville;
+}
+
+.benefit-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.benefit-item span {
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 17px;
+  font-family: Libre Baskerville;
+}
+
+.login-form label span {
+  color: red;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+  width: 100%;
+  padding: 12px 22px;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  width: 100%;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.login-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #0866ff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: Libre Baskerville;
+  letter-spacing: 1px;
+}
+
+.login-btn:hover {
+  background-color: #1360b2;
+}
+
+.login-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: Libre Baskerville;
+}
+
+.login-links a {
+  color: #0866ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-family: Libre Baskerville;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  border: 1px solid black;
+}
+
+.popup h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.ok-btn {
+  padding: 8px 170px;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  background-color: #0866ff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: Libre Baskerville;
+}
+
+.ok-btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/*SignUp.css*/
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: left;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Libre Baskerville;
+}
+
+.success-popup p {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.popup-btn {
+  margin-top: 15px;
+  padding: 8px 170px;
+  background-color: #0866ff;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.popup-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+/*ForgetPassword.css*/
+.forgot-password-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.forgot-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+.forgot-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.forgot-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal style giống hình bạn gửi */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 350px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.ok-button {
+  margin-top: 20px;
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.ok-button:hover {
+  background-color: #0056b3;
+}

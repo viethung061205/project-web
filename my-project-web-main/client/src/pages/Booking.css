@@ -1,0 +1,185 @@
+.book-container {
+    background-color: #142965;
+}
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  justify-items: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-family: Mouse Memoirs;
+}
+
+.location-card {
+  width: 400px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0px;
+  margin-top: 50px;
+}
+
+.location-card img {
+  width: 100%;
+  height: 500px;
+}
+
+.location-name,
+.book-btn {
+  margin-top: -4px;
+  padding: 5px;
+  background-color: #3ea1e9;
+  color: white;
+  cursor: pointer;
+}
+
+.location-name {
+  font-size: 38px;
+}
+
+.book-btn {
+  font-size: 38px;
+  padding: 5px;
+  margin-top: -10px;
+}
+
+.image-only .location-name,
+.image-only .book-btn {
+  display: none;
+}
+
+.image-only img {
+  width: 300%;
+  height: 600px;
+  margin-left: -350px;
+}
+
+
+.description-top {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.description-top p{
+  color: white;
+  font-family: Libre Baskerville;
+  font-size: 35px;
+  margin-left: 50px;
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.right-img {
+  width: 320px;
+  height: auto;
+  margin-right: 50px;
+}
+
+
+.description-bottom {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.description-bottom p{
+  color: white;
+  font-family: Libre Baskerville;
+  font-size: 35px;
+  margin-right: 50px;
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.left-img {
+  width: 550px;
+  height: auto;
+  margin-left: 50px;
+}
+
+
+.final-paragraph {
+  color: white;
+  font-family: Libre Baskerville;
+  font-size: 35px;
+  margin: 50px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: bold;
+}
+
+
+.ride-images-layout {
+  display: flex;
+  gap: 0px;
+}
+
+
+.left-section {
+  flex: 1;
+}
+
+.left-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.left-small-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-small-images img,
+.left-tall-image img {
+  object-fit: cover;
+}
+
+.left-small-images img {
+  height: 320px;
+}
+
+.left-tall-image img {
+  height: 650px;
+}
+
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 50px;
+}
+
+.right-top {
+  display: flex;
+  gap: 10px;
+}
+
+.right-top img {
+  flex: 1;
+  height: 380px;
+  object-fit: cover;
+}
+
+.right-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.right-bottom img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  height: 260px;
+  margin-bottom: 50px;
+}
+

@@ -1,0 +1,111 @@
+.ticket-list {
+  padding: 15px;
+  background: #d1e6f6;
+  border-radius: 10px;
+  font-family: Libre Baskerville;
+  margin-top: 20px;
+}
+
+.ticket-list h2 {
+  color: black;
+  font-family: Mouse Memoirs;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.ticket-card {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  border: 3px solid black;
+}
+
+.ticket-left {
+  width: 50%;
+  color: black;
+}
+
+.ticket-left h3 {
+  margin-bottom: 5px;
+  font-size: 45px;
+}
+
+.ticket-left p {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ticket-left a {
+  display: block;
+  color: #3b6ca5;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.label-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.label-btn {
+  padding: 5px;
+  border-radius: 50px;
+  font-size: 17px;
+  border: 3px solid black;
+  font-weight: bold;
+}
+
+.ticket-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.price strong {
+  font-size: 38px;
+  color: #e33517;
+  margin-right: 60px;
+}
+
+.price del {
+  font-size: 25px;
+  color: #737373;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.book-ticket-btn {
+  padding: 10px 80px;
+  background-color: #0e4fbc;
+  color: white;
+  border: 3px solid black;
+  border-radius: 50px;
+  font-size: 36px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: Libre Baskerville;
+  margin-bottom: -40px;
+  margin-top: 0px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.book-ticket-btn:hover {
+  background-color: #0044aa;
+}
