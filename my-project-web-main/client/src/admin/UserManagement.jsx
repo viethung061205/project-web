@@ -9,7 +9,7 @@ const UserManagement = () => {
   const [editData, setEditData] = useState({
     hoten: "",
     ngaysinh: "",
-    gioitinh: "Nam",
+    gioitinh: "",
     diachi: "",
     avatar: "",
     sdt: "",
@@ -82,7 +82,7 @@ const UserManagement = () => {
       setEditData({
         hoten: "",
         ngaysinh: "",
-        gioitinh: "Nam",
+        gioitinh: "",
         diachi: "",
         avatar: "",
         sdt: "",
@@ -145,6 +145,7 @@ const UserManagement = () => {
         <div className="input-group">
           <label>Gender:</label>
           <select name="gioitinh" value={editData.gioitinh} onChange={handleChange}>
+            <option value="">Select gender</option>
             <option value="Nam">Male</option>
             <option value="Nữ">Female</option>
             <option value="Khác">Other</option>

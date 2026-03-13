@@ -335,7 +335,7 @@ const BookingManagement = () => {
 
       {activeTab === "user" && (
 
-        <section className="box">
+        <section className="box user-ticket-section">
 
           {editingUserId && (
 
@@ -477,7 +477,7 @@ const BookingManagement = () => {
                     <td>{u.ma_ngan_hang}</td>
                     <td>{u.trang_thai}</td>
                     <td>{u.ma_gd_vnpay}</td>
-                    <td>
+                    <td className="user-actions">
                       <button className="btn-edit" onClick={() => startEditUser(u)}>Edit</button>
                       <button className="btn-delete" onClick={() => handleDeleteUserTicket(u.id)}>Delete</button>
                     </td>

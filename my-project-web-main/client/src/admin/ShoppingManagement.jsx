@@ -236,38 +236,37 @@ const ShoppingManagement = () => {
   };
 
   return (
-    <div className="admin-container">
+    <div className="shop-manage">
 
-      <div style={{ marginBottom: "20px" }}>
-        <button
-          className="btn-add"
-          onClick={() => setActiveTab("products")}
-          style={{ marginRight: "10px" }}
-        >
-          Product Management
-        </button>
+      <div className="admin-tabs">
 
-        <button
-          className="btn-save"
-          onClick={() => setActiveTab("orders")}
-          style={{ marginRight: "10px" }}
-        >
-          Order Management
-        </button>
+  <button
+    className={activeTab === "products" ? "tab active" : "tab"}
+    onClick={() => setActiveTab("products")}
+  >
+    Product Management
+  </button>
 
-        <button
-          className="btn-edit"
-          onClick={() => setActiveTab("cart")}
-        >
-          Cart Management
-        </button>
-      </div>
+  <button
+    className={activeTab === "orders" ? "tab active" : "tab"}
+    onClick={() => setActiveTab("orders")}
+  >
+    Order Management
+  </button>
+
+  <button
+    className={activeTab === "cart" ? "tab active" : "tab"}
+    onClick={() => setActiveTab("cart")}
+  >
+    Cart Management
+  </button>
+
+</div>
 
       {activeTab === "products" && (
         <>
           <h2 className="admin-title">Product Management</h2>
-
-          <div className="admin-form">
+          <div className="ticket-form">
             <input type="text" placeholder="Product name" value={tenSanPham} onChange={(e) => setTenSanPham(e.target.value)} />
 
             <select value={loai} onChange={(e) => setLoai(e.target.value)}>
@@ -324,11 +323,31 @@ const ShoppingManagement = () => {
               ))}
             </div>
 
-            {editingId ? (
-              <button className="btn-save" onClick={handleUpdateProduct}>Update Product</button>
-            ) : (
-              <button className="btn-add" onClick={handleAddProduct}>Add Product</button>
-            )}
+            <div className="form-btns">
+
+  {editingId ? (
+    <>
+      <button className="btn-save" onClick={handleUpdateProduct}>
+        Update Product
+      </button>
+
+      <button
+        className="btn-cancel"
+        onClick={() => {
+          setEditingId(null);
+          resetForm();
+        }}
+      >
+        Cancel
+      </button>
+    </>
+  ) : (
+    <button className="btn-save" onClick={handleAddProduct}>
+      Save Product
+    </button>
+  )}
+
+</div>
           </div>
 
           <div className="admin-table-wrapper">
@@ -394,34 +413,126 @@ const ShoppingManagement = () => {
           <h2 className="admin-title">Order Management</h2>
 
           {editingOrderId && (
-            <div className="admin-form">
-              <input type="text" placeholder="User Email" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
-              <input type="text" placeholder="Full Name" value={hoTen} onChange={(e) => setHoTen(e.target.value)} />
-              <input type="text" placeholder="Address" value={diaChi} onChange={(e) => setDiaChi(e.target.value)} />
-              <input type="text" placeholder="Phone" value={sdt} onChange={(e) => setSdt(e.target.value)} />
-              <input type="number" placeholder="Product ID" value={sanPhamId} onChange={(e) => setSanPhamId(e.target.value)} />
-              <input type="text" placeholder="Product Name" value={tenSanPhamOrder} onChange={(e) => setTenSanPhamOrder(e.target.value)} />
-              <input type="text" placeholder="Type" value={loaiOrder} onChange={(e) => setLoaiOrder(e.target.value)} />
-              <input type="number" placeholder="Price" value={giaOrder} onChange={(e) => setGiaOrder(e.target.value)} />
-              <input type="number" placeholder="Quantity" value={soLuongOrder} onChange={(e) => setSoLuongOrder(e.target.value)} />
 
-              <input type="text" placeholder="Image URL" value={anhOrder} onChange={(e) => setAnhOrder(e.target.value)} />
+  <form className="ticket-form">
 
-              <input type="number" placeholder="Total Price" value={tongTien} onChange={(e) => setTongTien(e.target.value)} />
-              <input type="datetime-local" value={thoiGianGiaoHang} onChange={(e) => setThoiGianGiaoHang(e.target.value)} />
+    <input
+      type="text"
+      placeholder="Full Name"
+      value={hoTen}
+      onChange={(e) => setHoTen(e.target.value)}
+    />
 
-              <select value={trangThai} onChange={(e) => setTrangThai(e.target.value)}>
-                <option value="To Confirm">To Confirm</option>
-                <option value="To Ship">To Ship</option>
-                <option value="Shipping">Shipping</option>
-                <option value="Delivered">Delivered</option>
-                <option value="Returned">Returned</option>
-                <option value="Cancelled">Cancelled</option>
-              </select>
+    <input
+      type="text"
+      placeholder="User Email"
+      value={userEmail}
+      onChange={(e) => setUserEmail(e.target.value)}
+    />
+    
+    <input
+      type="text"
+      placeholder="Phone"
+      value={sdt}
+      onChange={(e) => setSdt(e.target.value)}
+    />
 
-              <button className="btn-save" onClick={handleUpdateOrder}>Update Order</button>
-            </div>
-          )}
+    <input
+      type="text"
+      placeholder="Address"
+      value={diaChi}
+      onChange={(e) => setDiaChi(e.target.value)}
+    />
+
+    <input
+      type="number"
+      placeholder="Product ID"
+      value={sanPhamId}
+      onChange={(e) => setSanPhamId(e.target.value)}
+    />
+
+    <input
+      type="text"
+      placeholder="Product Name"
+      value={tenSanPhamOrder}
+      onChange={(e) => setTenSanPhamOrder(e.target.value)}
+    />
+
+    <input
+      type="text"
+      placeholder="Type"
+      value={loaiOrder}
+      onChange={(e) => setLoaiOrder(e.target.value)}
+    />
+
+    <input
+  type="number"
+  placeholder="Price"
+  value={giaOrder}
+  onChange={(e) => setGiaOrder(e.target.value)}
+/>
+
+<input
+  type="number"
+  placeholder="Quantity"
+  value={soLuongOrder}
+  onChange={(e) => setSoLuongOrder(e.target.value)}
+/>
+
+    <input
+  type="number"
+  placeholder="Total Price"
+  value={giaOrder && soLuongOrder ? giaOrder * soLuongOrder : ""}
+  readOnly
+/>
+    <input
+      type="text"
+      placeholder="Image URL"
+      value={anhOrder}
+      onChange={(e) => setAnhOrder(e.target.value)}
+    />
+
+    <input
+      type="datetime-local"
+      value={thoiGianGiaoHang}
+      onChange={(e) => setThoiGianGiaoHang(e.target.value)}
+    />
+
+    <select
+      value={trangThai}
+      onChange={(e) => setTrangThai(e.target.value)}
+    >
+      <option value="To Confirm">To Confirm</option>
+      <option value="To Ship">To Ship</option>
+      <option value="Shipping">Shipping</option>
+      <option value="Delivered">Delivered</option>
+      <option value="Returned">Returned</option>
+      <option value="Cancelled">Cancelled</option>
+    </select>
+
+    <div className="form-btns">
+
+      <button
+        type="button"
+        className="btn-save"
+        onClick={handleUpdateOrder}
+      >
+        Update Order
+      </button>
+
+      <button
+        type="button"
+        className="btn-cancel"
+        onClick={() => setEditingOrderId(null)}
+      >
+        Cancel
+      </button>
+
+    </div>
+
+  </form>
+
+)}
 
           <div className="admin-table-wrapper">
             <table className="admin-table">
@@ -521,13 +632,13 @@ const ShoppingManagement = () => {
                     <td>{formatDateTime(item.ngaytao)}</td>
                     <td>
                       {editingCartId === item.id ? (
-                        <button className="btn-save" onClick={() => handleUpdateCart(item.id)}>Save</button>
-                      ) : (
-                        <button className="btn-edit" onClick={() => {
-                          setEditingCartId(item.id);
-                          setCartSoLuong(item.soluong);
-                        }}>Edit</button>
-                      )}
+                      <button className="btn-edit" onClick={() => handleUpdateCart(item.id)}>Save</button>
+                    ) : (
+                      <button className="btn-edit" onClick={() => {
+                        setEditingCartId(item.id);
+                        setCartSoLuong(item.soluong);
+                      }}>Edit</button>
+                    )}
                       <button className="btn-delete" onClick={() => handleDeleteCart(item.id)}>Delete</button>
                     </td>
                   </tr>

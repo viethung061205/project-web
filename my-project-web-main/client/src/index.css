@@ -552,6 +552,8 @@ body, html {
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 
+
+
 /*Login.css*/
 .login-container {
   max-width: 700px;
@@ -671,10 +673,12 @@ body, html {
   transition: background 0.3s ease;
   font-family: Libre Baskerville;
   letter-spacing: 1px;
+  transition: 0.2s;
 }
 
 .login-btn:hover {
   background-color: #1360b2;
+  transform: scale(1.03);
 }
 
 .login-links {
