@@ -127,6 +127,20 @@ const UserManagement = () => {
     }
   };
 
+  const handleCancel = () => {
+  setEditingId(null);
+  setEditData({
+    hoten: "",
+    ngaysinh: "",
+    gioitinh: "",
+    diachi: "",
+    avatar: "",
+    sdt: "",
+    email: "",
+    matkhau: ""
+  });
+};
+
   return (
     <div className="user-management">
       <h2>User Management</h2>
@@ -183,9 +197,17 @@ const UserManagement = () => {
           />
         </div>
 
-        <button onClick={handleSubmit}>
-          {editingId ? "Update User" : "Add User"}
-        </button>
+        <div className="form-btns">
+  <button className="btn-save" onClick={handleSubmit}>
+    {editingId ? "Update User" : "Add User"}
+  </button>
+
+  {editingId && (
+    <button className="btn-cancel" onClick={handleCancel}>
+      Cancel
+    </button>
+  )}
+</div>
       </div>
 
       <table className="user-table">
